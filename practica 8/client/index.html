@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P8 • Microservicios (Usuarios + Clima)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Microservicios: Usuarios + Clima</h1>
+    <p class="muted">Cliente orquestador (fetch a dos servicios).</p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="controls">
+        <button id="btnListar">1. Listar Usuarios</button>
+        <select id="selectUsuario" disabled>
+          <option value="">2. Selecciona un usuario</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="resultsCard" class="card" style="display:none">
+      <h2>Hola, <span id="nombre_usuario">...</span></h2>
+      <p>Reporte del clima para tu ciudad (<strong id="ciudad">...</strong>):</p>
+      <ul>
+        <li>Temperatura: <strong id="temperatura">...</strong></li>
+        <li>Condición: <strong id="condicion">...</strong></li>
+      </ul>
+      <div id="error" class="error"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>Orquestación en el cliente: compone datos de dos APIs independientes.</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "CDMX":        { "ciudad": "CDMX",        "temperatura": "22°C", "condicion": "Soleado" },
+  "Guadalajara": { "ciudad": "Guadalajara", "temperatura": "24°C", "condicion": "Parcialmente nublado" },
+  "Monterrey":   { "ciudad": "Monterrey",   "temperatura": "26°C", "condicion": "Caluroso" }
+}

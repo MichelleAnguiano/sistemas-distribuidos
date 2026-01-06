@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P7 • PWA Books (Java HttpServer)</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>📚 PWA Books</h1>
+    <div id="net" class="net">⏳ comprobando red…</div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <form id="form" autocomplete="off">
+        <input id="titulo" type="text" placeholder="Título del libro…" required />
+        <input id="categoria" type="text" placeholder="Categoría (opcional)" />
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Listado</h2>
+      <ul id="lista" class="lista"></ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>Instalable + offline: Service Worker (activos estáticos) y LocalStorage (copia de datos).</small>
+  </footer>
+
+  <script src="/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
